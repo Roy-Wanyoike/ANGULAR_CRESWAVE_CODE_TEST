@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+// task-details.component.ts
+import { Component, Input } from '@angular/core';
+import { Task } from '../task.model';
 
 @Component({
   selector: 'app-task-details',
-  standalone: true,
-  imports: [],
   templateUrl: './task-details.component.html',
-  styleUrl: './task-details.component.css'
+  styleUrls: ['./task-details.component.css']
 })
 export class TaskDetailsComponent {
+  @Input() task: Task;
 
+  constructor() { }
 }
